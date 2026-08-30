@@ -357,9 +357,9 @@ it.layer(NodeServices.layer)("providerMaintenance", (it) => {
           provider: driver("nativePackageTool"),
           packageName: "@example/native-package-tool",
           update: {
-            command: "native-package-tool update",
+            command: `${nativePackageToolPath} update`,
 
-            executable: "native-package-tool",
+            executable: nativePackageToolPath,
 
             args: ["update"],
 
@@ -394,9 +394,9 @@ it.layer(NodeServices.layer)("providerMaintenance", (it) => {
           provider: driver("scopedPackageTool"),
           packageName: "@example/scoped-package-tool",
           update: {
-            command: "scoped-package-tool upgrade",
+            command: `${scopedPackageToolPath} upgrade`,
 
-            executable: "scoped-package-tool",
+            executable: scopedPackageToolPath,
 
             args: ["upgrade"],
 
